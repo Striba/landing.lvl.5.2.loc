@@ -12,11 +12,53 @@ use App\Portfolio;
 use App\People;
 
 use DB;
+use Mail;
 
 class IndexController extends Controller
 {
     //
     public function execute(Request $request) {//принимаем аргрумент - объект класса Request
+        
+        //Проверка какой метод обращения был принят
+        if($request->isMethod('post')){
+            
+            //Массив сообщений ошибок соотв. полям валидации
+            $messages = [
+                
+                'required' => "Поле :attribute обязательно к заполнению",
+                'email' => "Поле (Field) :attribute должно соответствовать email адресу"
+                
+            ];
+            
+            //Валидация входящих данных из контактной формы
+            $this->validate($request, [
+                
+                'name'  => 'required|max:255',
+                'email' => 'required|email',
+                'text'  => 'required'
+                
+            ], $messages);
+            
+            //dump($request);
+            //Заносим данные запроса в переменную
+            $data = $request->all();
+            
+            //отправляем письмо:
+            $result = Mail::send('site.email', ['data' => $data], function ($message)use ($data){
+                
+                $mail_admin = env('MAIL_ADMIN');
+                
+                //От кого отправляется письмо:
+                $message->from($data['email'], $data['name']);
+                //Куда отправляется письмо, -> тема письма:
+                $message->to($mail_admin,'Mr. Admin')->subject('Question');
+                
+            });
+            
+            if($result){
+                return redirect()->route('home')->with('status','Email is send');
+            }
+        }
         
         $pages = Page::all();//выбераем все записи из таблички page
         $portfolios = Portfolio::get(array('name','filter','images'));//указали поля которые нам нужно выбрать
