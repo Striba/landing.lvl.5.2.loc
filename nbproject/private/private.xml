@@ -5,10 +5,8 @@
         <group>
             <file>file:/D:/programming/open_server_5_2_6_basic/OS526/OpenServer/domains/landing.lvl.5.2.loc/resources/views/site/content.blade.php</file>
             <file>file:/D:/programming/open_server_5_2_6_basic/OS526/OpenServer/domains/landing.lvl.5.2.loc/app/Http/Controllers/IndexController.php</file>
-            <file>file:/D:/programming/open_server_5_2_6_basic/OS526/OpenServer/domains/landing.lvl.5.2.loc/resources/views/layouts/site.blade.php</file>
             <file>file:/D:/programming/open_server_5_2_6_basic/OS526/OpenServer/domains/landing.lvl.5.2.loc/app/Http/routes.php</file>
             <file>file:/D:/programming/open_server_5_2_6_basic/OS526/OpenServer/domains/landing.lvl.5.2.loc/resources/views/site/header.blade.php</file>
-            <file>file:/D:/programming/open_server_5_2_6_basic/OS526/OpenServer/domains/landing.lvl.5.2.loc/resources/views/site/index.blade.php</file>
         </group>
     </open-files>
 </project-private>
