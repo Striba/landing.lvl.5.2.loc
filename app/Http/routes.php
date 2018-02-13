@@ -28,6 +28,11 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],  function (){
     //admin Вывод главной страницы админки
     Route::get('/',  function (){
         
+        //Проверка наличия шаблона представления главной страницы админки
+        if (view()->exists('admin.index')){
+            $data = ['title' => 'Панель администратора'];
+            return view('admin.index',$data);
+        }
     });
     
     //admin/pages Группа работы со страницами(pages)
@@ -51,7 +56,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],  function (){
     Route::group(['prefix' => 'portfolios'], function (){
         
         //admin/portfolios Маршрут главной страницы раздела управления портфолио
-        Route::get('/',['uses' => 'PortfolioController@execute', 'as' => 'portfolios']);
+        Route::get('/',['uses' => 'PortfolioController@execute', 'as' => 'portfolio']);
         
         //admin/portfolios/add Добавление страницы
         Route::match(['get','post'],'/add',['uses' => 'PortfolioAddController@execute',
@@ -84,3 +89,6 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],  function (){
 
     
 });
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

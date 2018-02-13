@@ -105,6 +105,7 @@ class IndexController extends Controller
                                         'portfolios' => $portfolios,
                                         'peoples'    => $peoples,
                                         'tags'       => $tags,
+                                        'title'      => 'Главная страница'
                                         ));//указываем, что наше представление 
                                         //index находится в папке site 
                                         //и передаем пеерменные исспльзуемые
