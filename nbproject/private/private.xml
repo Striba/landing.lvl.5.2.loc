@@ -5,6 +5,10 @@
         <group>
             <file>file:/D:/programming/open_server_5_2_6_basic/OS526/OpenServer/domains/landing.lvl.5.2.loc/resources/views/admin/content_pages_add.blade.php</file>
             <file>file:/D:/programming/open_server_5_2_6_basic/OS526/OpenServer/domains/landing.lvl.5.2.loc/resources/views/layouts/admin.blade.php</file>
+            <file>file:/D:/programming/open_server_5_2_6_basic/OS526/OpenServer/domains/landing.lvl.5.2.loc/vendor/symfony/http-foundation/File/UploadedFile.php</file>
+            <file>file:/D:/programming/open_server_5_2_6_basic/OS526/OpenServer/domains/landing.lvl.5.2.loc/resources/views/site/content.blade.php</file>
+            <file>file:/D:/programming/open_server_5_2_6_basic/OS526/OpenServer/domains/landing.lvl.5.2.loc/app/Page.php</file>
+            <file>file:/D:/programming/open_server_5_2_6_basic/OS526/OpenServer/domains/landing.lvl.5.2.loc/app/Http/Controllers/PagesAddController.php</file>
             <file>file:/D:/programming/open_server_5_2_6_basic/OS526/OpenServer/domains/landing.lvl.5.2.loc/app/Http/routes.php</file>
             <file>file:/D:/programming/open_server_5_2_6_basic/OS526/OpenServer/domains/landing.lvl.5.2.loc/resources/views/admin/pages_add.blade.php</file>
         </group>
